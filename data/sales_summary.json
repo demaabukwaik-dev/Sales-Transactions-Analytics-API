@@ -1,0 +1,14 @@
+{
+    "total_number_of_orders": 2,
+    "number_of_unique_customers": 2,
+    "total_revenue": 35641.47,
+    "average_order_value": 17820.735,
+    "available_product_categories": [
+        "toys",
+        "electronics"
+    ],
+    "payment_methods_used": [
+        "credit_card",
+        "crypto"
+    ]
+}

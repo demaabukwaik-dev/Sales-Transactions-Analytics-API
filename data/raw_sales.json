@@ -1,0 +1,116 @@
+[
+    {
+        "order_id": "ORD-001",
+        "customer_id": "CUST-01",
+        "order_date": "2025-01-10",
+        "items": [
+            {
+                "product_id": "P-100",
+                "category": "electronics",
+                "price": 1200.5,
+                "quantity": 1
+            },
+            {
+                "product_id": "P-100",
+                "category": "electronics",
+                "price": 1200.5,
+                "quantity": 2
+            }
+        ],
+        "payment_method": "credit_card"
+    },
+    {
+        "order_id": "ORD-002",
+        "customer_id": null,
+        "order_date": "2025-01-11",
+        "items": [
+            {
+                "product_id": "P-200",
+                "category": "books",
+                "price": "cheap",
+                "quantity": 3
+            },
+            {
+                "product_id": "P-201",
+                "category": null,
+                "price": null,
+                "quantity": 2
+            }
+        ],
+        "payment_method": "paypal"
+    },
+    {
+        "order_id": "ORD-003",
+        "customer_id": null,
+        "order_date": "2025-01-12",
+        "items": [
+            {
+                "product_id": "P-300",
+                "category": "clothing",
+                "price": 45.99,
+                "quantity": 0
+            },
+            {
+                "product_id": "P-301",
+                "category": "clothing",
+                "price": 89.99,
+                "quantity": 2
+            }
+        ],
+        "payment_method": null
+    },
+    {
+        "order_id": "ORD-001",
+        "customer_id": "CUST-01",
+        "order_date": "2025-01-10",
+        "items": [
+            {
+                "product_id": "P-100",
+                "category": "electronics",
+                "price": 1200.5,
+                "quantity": 1
+            }
+        ],
+        "payment_method": "credit_card"
+    },
+    {
+        "order_id": null,
+        "customer_id": "CUST-04",
+        "order_date": "2025-01-15",
+        "items": [
+            {
+                "product_id": "P-400",
+                "category": "food",
+                "price": 5.5,
+                "quantity": 10
+            }
+        ],
+        "payment_method": "cash"
+    },
+    {
+        "order_id": "ORD-005",
+        "customer_id": "CUST-05",
+        "order_date": "2025-01-16",
+        "items": [
+            {
+                "product_id": "P-500",
+                "category": "toys",
+                "price": -20,
+                "quantity": 1
+            },
+            {
+                "product_id": "P-501",
+                "category": "toys",
+                "price": 15.99,
+                "quantity": 2000
+            },
+            {
+                "product_id": "P-502",
+                "category": "toys",
+                "price": 19.99,
+                "quantity": 3
+            }
+        ],
+        "payment_method": "crypto"
+    }
+]
