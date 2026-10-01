@@ -1,35 +1,37 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from processor import SalesProcessor
 from processor import Orders
 
 
 class Server:
-    def __init__(self , sales_processor: SalesProcessor):
+    def __init__(self, sales_processor: SalesProcessor):
         self.app = FastAPI()
-        self.sales_processor = sales_processor   
+        self.sales_processor = sales_processor
         self._setup_routes()
 
     def _setup_routes(self):
-        
+
         @self.app.get("/")
         def health_check():
-            return {"message": "server is running "}
-
+            return {"message": "server is running"}
 
         @self.app.post("/orders")
-        def receive_raw_orders(orders :  Orders):
-            return self.sales_processor.store_orders(orders)
-            
+        def receive_raw_orders(orders: Orders):
+            try:
+                return self.sales_processor.store_orders(orders)
+            except Exception as e:
+                raise HTTPException(500, str(e))
 
         @self.app.post("/process_orders")
         def process_raw_orders():
-            return self.sales_processor.process_orders() 
-                   
+            return self.sales_processor.process_orders()
 
         @self.app.get("/analytics_summary")
         def get_analytics_summary():
-            return self.sales_processor.analyze_orders()
-            
+            try:
+                return self.sales_processor.analyze_orders()
+            except Exception as e:
+                raise HTTPException(500, str(e))
 
 
 processor_instance = SalesProcessor()
